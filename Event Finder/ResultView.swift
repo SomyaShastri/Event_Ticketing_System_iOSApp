@@ -145,8 +145,7 @@ func venueCall(locName: String, completion: @escaping ([String:String]) -> Void)
 }
 
 func getLocationCall(add: String, completion: @escaping (CLLocationCoordinate2D) -> Void) {
-    //let apiKey = "AIzaSyDLee5uk4GKhBcLN8J9kD_AjMY_Kir7RBs"
-    let apiKey = "AIzaSyDLee5uk4GKhBcLN8J9kD_AjMY_Kir7RBs"
+    let apiKey = "<api key>"
     let apiUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + add.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)! + "&key=" + apiKey
     print(apiUrl)
     AF.request(apiUrl, method: .get).responseJSON{ response in
