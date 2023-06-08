@@ -304,7 +304,7 @@ func meth1(apiUrl: String, completion: @escaping ([[String: String]]) -> Void){
 }
 
 func getIpInfo(completion: @escaping (String) -> Void) {
-    let apiUrl = "https://ipinfo.io/?token=7e8037c391fffd"
+    let apiUrl = "https://ipinfo.io/?token=<token>"
     AF.request(apiUrl, method: .get).responseJSON { response in
         var locString = ""
         switch response.result {
@@ -321,7 +321,7 @@ func getIpInfo(completion: @escaping (String) -> Void) {
 }
 
 func  getLocation(locationTextBox: String, completion: @escaping (String) -> Void) {
-    let apiKey = "AIzaSyDLee5uk4GKhBcLN8J9kD_AjMY_Kir7RBs";
+    let apiKey = "<key here>";
     var apiUrl = "https://maps.googleapis.com/maps/api/geocode/json?address="
     apiUrl += locationTextBox.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     apiUrl += "&key=" + apiKey;
